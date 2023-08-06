@@ -2,7 +2,9 @@
 
 ## How to build
 
-TODO
+```bash
+docker build -t px4-sitl-gazebo .
+```
 
 ## How to run
 
