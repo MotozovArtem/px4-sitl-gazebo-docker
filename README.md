@@ -28,9 +28,9 @@ Run Px4 SITL wth Gazebo simulation with specified location:
 
 ```bash
 docker run -it -p 14540:14540/udp -p 5760:5760 \
-    --env PX4_HOME_LAT=56.8625617
-    --env PX4_HOME_LON=24.1131178
-    --env PX4_HOME_ALT=11.86
-    --name px4-sitl-gazebo-container-name 
+    --env PX4_HOME_LAT=56.8625617 \
+    --env PX4_HOME_LON=24.1131178 \
+    --env PX4_HOME_ALT=11.86 \
+    --name px4-sitl-gazebo-container-name \ 
     px4-sitl-gazebo
 ```
