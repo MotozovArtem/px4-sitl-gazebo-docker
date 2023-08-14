@@ -2,12 +2,14 @@ FROM ubuntu:20.04
 
 LABEL org.opencontainers.image.authors='Artem Motozov <motozov.a.v@gmail.com>'
 
+ARG TAG=v1.13.3
+
 RUN apt-get update && \
     apt-get install -y git curl wget
 
 WORKDIR /sitl
 
-RUN git clone https://github.com/PX4/PX4-Autopilot.git --branch=v1.13.3 --recursive && \
+RUN git clone https://github.com/PX4/PX4-Autopilot.git --branch=${TAG} --recursive && \
     touch /.dockerenv && \
     bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
 
